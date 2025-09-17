@@ -22,9 +22,9 @@
 
 ## Fonts
 
-* This repository contains a:
-  * [C program](makefont.c) which converts these tables to JSON,
-  * and [Python program](makefont.py) which converts the JSON to a [Spline Font Database](https://github.com/fontforge/fontforge/blob/master/fontforge/sfd.c).
+* This repository contains:
+  * a [C program](makefont.c) which converts these tables to JSON files,
+  * and [Python program](makefont.py) which converts the JSON files to [Spline Font Databases](https://github.com/fontforge/fontforge/blob/master/fontforge/sfd.c).
 * [Fontforge](https://fontforge.org/) is used to convert the generated SFD files to monospaced TrueType fonts.
 
 ### Variants
