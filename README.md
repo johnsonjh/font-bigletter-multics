@@ -10,25 +10,25 @@
 
 ## Overview
 
-* The [Multics](https://swenson.org/multics_wiki/)
-  [printing software](https://multicians.org/printer.html) includes the
-  [`bigletter_`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/bigletter_.pl1.html),
-  which is the procedure which creates the fonts used for printing the
-  banner pages (head and tail).
-* The fonts themselves are defined in
-  [letseg_.alm](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/letseg_.alm.html).
-* There are actually *two* fonts defined in the tables:
-  * A "*big*" font which is **9×8**, the *large* font used in the body of the banner pages, and,
-  * A "*little*" font which is **5×5**, the *small* font used for printing on the edges of the banner pages.
-* You can read some anecdotes at [multicians.org](https://multicians.org/bigletter_.html).
-[]()
+* The [Multics](https://swenson.org/multics_wiki/) I/O daemon (see
+  [Multics printing software](https://multicians.org/printer.html)) uses the
+  [`bigletter_`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/bigletter_.pl1.html) procedure for creating print job (head and tail) banner pages.
+* The fonts used on these pages are defined in
+  [`letseg_.alm`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/letseg_.alm.html) from the Multics source code.
+* There are actually *two* fonts defined in these tables:
+  * A "*big*" font which is **9×8** (a *large* font used in the body of the banner pages), and,
+  * A "*little*" font which is **5×5** (a *small* font used for printing on the edges of the banner pages).
+* You can read some anecdotes about this code at [multicians.org](https://multicians.org/bigletter_.html).
 
-[]()
-* This repository contains a [C program](makefont.c) which converts these
-  tables to JSON, and a [Python program](makefont.py) which converts the JSON
-  to a [Spline Font Database](https://github.com/fontforge/fontforge/blob/master/fontforge/sfd.c).
-  [Fontforge](https://fontforge.org/) is used to convert the SFD files to
-  monospaced TrueType fonts.
+## Fonts
+
+* This repository contains a:
+  * [C program](makefont.c) which converts these tables to JSON,
+  * and [Python program](makefont.py) which converts the JSON to a [Spline Font Database](https://github.com/fontforge/fontforge/blob/master/fontforge/sfd.c).
+* [Fontforge](https://fontforge.org/) is used to convert the generated SFD files to monospaced TrueType fonts.
+
+### Variants
+
 * We build *two* different TrueType variants of each font:
   * the "normal" font optimized for small sizes, and,
   * a "star" variant optimized for large
