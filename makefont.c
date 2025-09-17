@@ -32,7 +32,7 @@ word_bits (const char * oct_str, int width, int * bits, int offset)
   uint64_t v = 0;
   int i;
 
-  (void)sscanf (oct_str, "%" SCNo64, &v);
+  (void)sscanf (oct_str, "%" SCNo64, & v);
 
   for (i = 0; i < width; i++)
     {
@@ -365,14 +365,21 @@ main (int argc, char * argv [])
     {
       if (0 == strcmp (argv [1], "big"))
         {
-          const int num_lines = sizeof (big_lines) / sizeof (big_lines [0]);
+          const int num_lines =
+            sizeof (big_lines) / sizeof (big_lines [0]);
+
           decode_table (big_lines, num_lines, 8, 9, 72);
+
           return EXIT_SUCCESS;
         }
+
       if (0 == strcmp (argv [1], "little"))
         {
-          const int num_lines = sizeof (littles_lines) / sizeof (littles_lines [0]);
+          const int num_lines =
+            sizeof (littles_lines) / sizeof (littles_lines [0]);
+
           decode_table (littles_lines, num_lines, 5, 5, 36);
+
           return EXIT_SUCCESS;
         }
     }
