@@ -16,8 +16,11 @@
 * The fonts used on these pages are defined in
   [`letseg_.alm`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/letseg_.alm.html) from the Multics source code.
 * There are actually *two* fonts defined in these tables:
-  * A "*big*" font which is **9×8** (a *large* font used in the body of the banner pages), and,
-  * A "*little*" font which is **5×5** (a *small* font used for printing on the edges of the banner pages).
+  * The "*big*" font which is **9×8** (a *large* font used in the body of the banner pages), and,
+  * The "*little*" font which is **5×5** (a *small* font used for printing on the edges of the banner pages).
+[]()
+
+[]()
 * You can read some anecdotes about this code at [multicians.org](https://multicians.org/bigletter_.html).
 
 ## Fonts
