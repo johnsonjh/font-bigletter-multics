@@ -12,7 +12,7 @@
 
 * The [Multics](https://swenson.org/multics_wiki/) I/O daemon (see
   [Multics printing software](https://multicians.org/printer.html)) uses the
-  [`bigletter_`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/bigletter_.pl1.html) procedure for creating the large text used for print job (head and tail) banner pages.
+  [`bigletter_`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/bigletter_.pl1.html) procedure to create the large text used on print job head and tail (banner) pages.
 * The fonts used on these pages are defined in
   [`letseg_.alm`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/letseg_.alm.html) from the Multics source code.
 * There are actually *two* fonts defined in these tables:
