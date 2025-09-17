@@ -60,7 +60,7 @@ BigletterMultics-Regular.sfd: big.json ./makefont.py
 # Target: BigletterStarMultics-Regular.sfd
 
 BigletterStarMultics-Regular.sfd: big.json ./makefont.py
-	./makefont.py --name BigletterStarMultics --shape Diamond \
+	./makefont.py --name BigletterStarMultics --shape Star \
 		--xy-scale 1.32 --radius 40 --json "big.json"
 
 ##############################################################################
@@ -86,7 +86,7 @@ BigletterMultics-Bold.sfd: big.json ./makefont.py
 # Target: BigletterStarMultics-Bold.sfd
 
 BigletterStarMultics-Bold.sfd: big.json ./makefont.py
-	./makefont.py --name BigletterStarMultics --bold --shape Diamond \
+	./makefont.py --name BigletterStarMultics --bold --shape Star \
 		--xy-scale 1.32 --radius 38 --json "big.json"
 
 ##############################################################################
@@ -112,7 +112,7 @@ LittleletterMultics-Regular.sfd: little.json ./makefont.py
 # Target: LittleletterStarMultics-Regular.sfd
 
 LittleletterStarMultics-Regular.sfd: little.json ./makefont.py
-	./makefont.py -n LittleletterStarMultics -s Diamond \
+	./makefont.py -n LittleletterStarMultics -s Star \
 		--xy-scale 1.08 --radius 60 --json "little.json"
 
 ##############################################################################
