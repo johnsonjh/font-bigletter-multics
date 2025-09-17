@@ -30,8 +30,8 @@
 ### Variants
 
 * We build *two* different TrueType variants of each font:
-  * the "normal" font optimized for small sizes, and,
-  * a "star" variant optimized for large
+  * the "normal" font optimized for the screen and smaller sizes, and,
+  * a "star" variant optimized for larger print (like banner pages!)
 
 ## Build
 
