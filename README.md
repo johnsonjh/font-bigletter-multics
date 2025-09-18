@@ -52,6 +52,11 @@
 
 * Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/)) are planned.
 
+## Availability
+
+* The canonical repository is [GitLab](https://gitlab.com/dps8m/font-bigletter-multics).
+* A [GitHub](https://github.com/johnsonjh/font-bigletter-multics) mirror is also available.
+
 ## License
 
 * These fonts come directly from Multics, and are distributed under the terms of the **Multics License**:
