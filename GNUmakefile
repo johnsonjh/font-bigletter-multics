@@ -16,7 +16,7 @@
 SHELL=/bin/sh
 RM=rm -f
 FONTFORGE?=fontforge
-FONTFORGE_ARGS?=-lang=ff -c 'Open($$1); Generate($$2)'
+FONTFORGE_ARGS?=-lang=ff -c 'Open($$1); SetFontNames($$2, $$2, $$2); Generate($$2)'
 CC?=cc
 CFLAGS?=-O
 LDFLAGS?=-s
