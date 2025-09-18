@@ -32,7 +32,7 @@
 []()
 
 []()
-* [Fontforge](https://fontforge.org/) is used to convert the generated SFD files to monospaced TrueType fonts.
+* [Fontforge](https://fontforge.org/) is used to convert the SFD files to monospaced dot-matrix TrueType fonts.
 
 ### Variants
 
@@ -50,7 +50,7 @@
 
 ## Future
 
-* Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/)) are planned.  Only dot‑matrix style fonts are generated at this time.
+* Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/)) are planned.
 
 ## License
 
