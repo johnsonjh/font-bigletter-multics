@@ -7,7 +7,7 @@
  * ---------------------------------------------------------------------------
  *
  * Copyright (c) 1972 Massachusetts Institute of Technology
- * Copyright (c) 1972 Honeywell Information Systems, Inc.
+ * Copyright (c) 1972-1982 Honeywell Information Systems, Inc.
  * Copyright (c) 2006 Bull HN Information Systems, Inc.
  * Copyright (c) 2006 Bull SAS
  * Copyright (c) 2025 Jeffrey H. Johnson
