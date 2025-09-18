@@ -32,7 +32,7 @@
 []()
 
 []()
-* [Fontforge](https://fontforge.org/) is used to convert the SFD files to monospaced dot-matrix TrueType fonts.
+* [Fontforge](https://fontforge.org/) is used to convert the SFD files to monospaced dot-matrix style TrueType fonts.
 
 ### Variants
 
