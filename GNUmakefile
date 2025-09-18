@@ -110,14 +110,14 @@ BigletterStarMultics-Bold.ttf: BigletterStarMultics-Bold.sfd
 # Target: LittleletterMultics-Regular.sfd
 
 LittleletterMultics-Regular.sfd: little.json ./makefont.py
-	./makefont.py -n LittleletterMultics --shape Diamond \
+	./makefont.py --name LittleletterMultics --shape Diamond \
 		--xy-scale 1.08 --radius 60 --json "little.json"
 
 ##############################################################################
 # Target: LittleletterStarMultics-Regular.sfd
 
 LittleletterStarMultics-Regular.sfd: little.json ./makefont.py
-	./makefont.py -n LittleletterStarMultics --shape Star \
+	./makefont.py --name LittleletterStarMultics --shape Star \
 		--xy-scale 1.08 --radius 60 --json "little.json"
 
 ##############################################################################
@@ -136,14 +136,14 @@ LittleletterStarMultics-Regular.ttf: LittleletterStarMultics-Regular.sfd
 # Target: LittleletterMultics-Bold.sfd
 
 LittleletterMultics-Bold.sfd: little.json ./makefont.py
-	./makefont.py -n LittleletterMultics --bold -s Diamond \
+	./makefont.py --name LittleletterMultics --bold -s Diamond \
 		--xy-scale 1.08 --radius 58 --json "little.json"
 
 ##############################################################################
 # Target: LittleletterStarMultics-Bold.sfd
 
 LittleletterStarMultics-Bold.sfd: little.json ./makefont.py
-	./makefont.py -n LittleletterStarMultics --bold --shape Star \
+	./makefont.py --name LittleletterStarMultics --bold --shape Star \
 		--xy-scale 1.08 --radius 58 --json "little.json"
 
 ##############################################################################
