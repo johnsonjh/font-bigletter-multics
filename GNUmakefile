@@ -1,5 +1,5 @@
 ##############################################################################
-# Bigletter Multics Font - Makefile
+# Bigletter Multics Font - GNUmakefile
 # SPDX-License-Identifier: Multics
 # Copyright (c) 1972 Massachusetts Institute of Technology
 # Copyright (c) 1972 Honeywell Information Systems, Inc.
