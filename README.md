@@ -71,7 +71,7 @@
   Multics License
 
   Copyright © 1972 The Massachusetts Institute of Technology
-  Copyright © 1972 Honeywell Information Systems, Inc.
+  Copyright © 1972-1982 Honeywell Information Systems, Inc.
   Copyright © 2006 Bull HN Information Systems, Inc.
   Copyright © 2006 Bull SAS
   Copyright © 2025 Jeffrey H. Johnson
