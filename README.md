@@ -53,7 +53,7 @@
 ## Future
 
 * Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/))
-* Rendering the "star" variants using asterisk
+* Rendering the "star" variants using asterisks
 * Add proper intra-character spacing and kerning hints, eliminating the need for manual adjustments.
 
 ## Availability
