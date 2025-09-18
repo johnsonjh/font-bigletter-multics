@@ -20,16 +20,21 @@ FONTFORGE_ARGS?=-lang=ff -c 'Open($$1); Generate($$2)'
 CC?=cc
 CFLAGS?=-O
 LDFLAGS?=-s
+CP?=cp -f
+MAKE?="$$(command -v gnumake 2> /dev/null || \
+          command -v gmake   2> /dev/null || \
+          command -v make    2> /dev/null || \
+          printf '%s\n' 'make')"
 .NOTPARALLEL:
 
 ##############################################################################
 # Target: all
 
 .PHONY: all
-all: BigletterMultics-Regular.ttf BigletterMultics-Bold.ttf \
-		LittleletterMultics-Regular.ttf LittleletterMultics-Bold.ttf \
-		BigletterStarMultics-Regular.ttf BigletterStarMultics-Bold.ttf \
-		LittleletterStarMultics-Regular.ttf LittleletterStarMultics-Bold.ttf
+all: BigletterMultics-Regular.ttf        BigletterMultics-Bold.ttf     \
+     LittleletterMultics-Regular.ttf     LittleletterMultics-Bold.ttf  \
+     BigletterStarMultics-Regular.ttf    BigletterStarMultics-Bold.ttf \
+     LittleletterStarMultics-Regular.ttf LittleletterStarMultics-Bold.ttf
 
 ##############################################################################
 # Target: makefont
@@ -154,11 +159,19 @@ LittleletterStarMultics-Bold.ttf: LittleletterStarMultics-Bold.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
+# Target: distdir
+
+.PHONY: distdir
+distdir: all ./TrueType
+	$(CP) ./*.ttf ./TrueType/
+	$(MAKE) clean
+
+##############################################################################
 # Target: clean
 
 .PHONY: clean
 clean:
-	$(RM) makefont big.json little.json compile_commands.json ./*.sfd ./*.ttf
+	$(RM) ./makefont ./*.json ./*.sfd ./*.ttf
 
 ##############################################################################
 # vim: set ft=make noexpandtab tabstop=4 cc=78 :
