@@ -50,8 +50,7 @@
 
 ## Future
 
-* The creation of fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/)) is planned.
-* For now, only dot‑matrix style fonts are generated.
+* Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/)) are planned.  Only dot‑matrix style fonts are generated at this time.
 
 ## License
 
