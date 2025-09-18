@@ -8,7 +8,7 @@
 <!-- scspell-id: 9c26b4ce-9415-11f0-9013-80ee73e9b8e7 -->
 # Bigletter (and Littleletter) Multics Fonts
 
-<img src=".images/BigLetter.png" width="50%" />
+<img src=".images/BigLetter.png" width="48%" /><img src=".images/LittleLetter.png" width="48%" />
 
 ## Overview
 
