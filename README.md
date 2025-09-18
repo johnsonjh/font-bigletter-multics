@@ -8,6 +8,8 @@
 <!-- scspell-id: 9c26b4ce-9415-11f0-9013-80ee73e9b8e7 -->
 # Bigletter (and Littleletter) Multics Fonts
 
+<img src=".images/BigLetter.png" width="50%" />
+
 ## Overview
 
 * The [Multics](https://swenson.org/multics_wiki/) I/O daemon (*see:* [Multics printing software](https://multicians.org/printer.html)) includes the [`bigletter_`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/bigletter_.pl1.html) procedure.
@@ -52,6 +54,7 @@
 
 * Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/))
 * Rendering the "star" variants using asterisk
+* Add proper intra-character spacing and add kerning hints
 
 ## Availability
 
