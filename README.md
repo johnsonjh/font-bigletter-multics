@@ -50,7 +50,8 @@
 
 ## Future
 
-* Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/)) are planned.
+* Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/))
+* Rendering the "star" variants using asterisk
 
 ## Availability
 
