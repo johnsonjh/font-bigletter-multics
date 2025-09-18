@@ -54,8 +54,8 @@
 
 ## Availability
 
-* The canonical repository is [GitLab](https://gitlab.com/dps8m/font-bigletter-multics).
-* A [GitHub](https://github.com/johnsonjh/font-bigletter-multics) mirror is also available.
+* The canonical repository is located at [GitLab](https://gitlab.com/dps8m/font-bigletter-multics).
+* A mirror at [GitHub](https://github.com/johnsonjh/font-bigletter-multics) is also available.
 
 ## License
 
