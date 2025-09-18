@@ -19,7 +19,10 @@
 * There are actually *two* fonts defined in these tables:
   * The "*big*" font which is **9×8** (a *large* font used in the body of the banner pages), and,
   * The "*little*" font which is **5×5** (a *small* font used for printing on the edges of the banner pages).
-* You can read some anecdotes about this code at [multicians.org](https://multicians.org/bigletter_.html).
+[]()
+
+[]()
+* You can read some interesting anecdotes about this code at [multicians.org](https://multicians.org/bigletter_.html).
 
 ## Fonts
 
