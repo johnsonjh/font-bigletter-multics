@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: Multics
+# Copyright (c) 1972 Massachusetts Institute of Technology
+# Copyright (c) 1972 Honeywell Information Systems, Inc.
+# Copyright (c) 2006 Bull HN Information Systems, Inc.
+# Copyright (c) 2006 Bull SAS
+# Copyright (c) 2025 Jeffrey H. Johnson
+# Copyright (c) 2025 The DPS8M Development Team
+
+version = 1
+SPDX-PackageName = "font-bigletter-multics"
+SPDX-PackageSupplier = "Jeffrey H. Johnson <trnsz@pobox.com>"
+SPDX-PackageDownloadLocation = "https://gitlab.com/dps8m/font-bigletter-multics"
+
+[[annotations]]
+path = "TrueType/**"
+precedence = "aggregate"
+SPDX-FileCopyrightText = ["Copyright (c) 1972 Massachusetts Institute of Technology", "Copyright (c) 1972 Honeywell Information Systems, Inc.", "Copyright (c) 2006 Bull HN Information Systems, Inc.", "Copyright (c) 2006 Bull SAS", "Copyright (c) 2025 Jeffrey H. Johnson", "Copyright (c) 2025 The DPS8M Development Team"]
+SPDX-License-Identifier = "Multics"
