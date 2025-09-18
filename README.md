@@ -42,7 +42,7 @@
 
 ## Build
 
-* Building the fonts from source requires [GNU Make](https://www.gnu.org/software/make/), a [C compiler](https://gcc.gnu.org/), [Python 3](https://www.python.org/), and [Fontforge](https://fontforge.org/).
+* Building the fonts from source requires [GNU Make](https://www.gnu.org/software/make/), a [C compiler](https://gcc.gnu.org/), [Python 3](https://www.python.org/), and [Fontforge](https://fontforge.org/) (*with Python support*).
 
 ## Download
 
