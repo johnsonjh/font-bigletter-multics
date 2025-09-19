@@ -18,7 +18,7 @@ SPDX-FileCopyrightText = ["Copyright (c) 1972 Massachusetts Institute of Technol
 SPDX-License-Identifier = "Multics"
 
 [[annotations]]
-path = ".images/**"
+path = ".preview/**"
 precedence = "aggregate"
 SPDX-FileCopyrightText = ["Copyright (c) 2025 Jeffrey H. Johnson", "Copyright (c) 2025 The DPS8M Development Team"]
 SPDX-License-Identifier = "Multics"

@@ -1,0 +1,19 @@
+# Create PNGs
+
+rm -vf page-*.png
+
+gs \
+  -dNOPAUSE \
+  -dBATCH \
+  -sDEVICE=png16m \
+  -r600 \
+  -dUseCropBox \
+  -sOutputFile="page-%03d.png" \
+  Bigletter_Littleletter.pdf
+
+advpng -z4 page-*.png
+
+mv page-001.png BigLetter.png
+mv page-002.png LittleLetter.png
+mv page-003.png BigLetter-sample.png
+mv page-004.png LittleLetter-sample.png
