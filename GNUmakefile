@@ -17,7 +17,7 @@ SHELL=/bin/sh
 RM=rm -f
 FONTFORGE?=fontforge
 FONTFORGE_ARGS?=-lang=ff -c \
-  'Open($$1); SetFontNames($$2, $$2, $$2); Generate($$2)'
+  'Open($$1); SetFontNames($$2, $$2, $$2); Generate($$3)'
 CC?=cc
 CFLAGS?=-O
 LDFLAGS?=-s
@@ -92,27 +92,6 @@ BigletterAsteriskMultics-Regular.sfd: \
 		--shape Asterisk --xy-scale 1.47 --radius 40 --json "big.json"
 
 ##############################################################################
-# Target: BigletterMultics-Regular.ttf
-
-BigletterMultics-Regular.ttf: \
-		BigletterMultics-Regular.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: BigletterStarMultics-Regular.ttf
-
-BigletterStarMultics-Regular.ttf: \
-		BigletterStarMultics-Regular.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: BigletterAsteriskMultics-Regular.ttf
-
-BigletterAsteriskMultics-Regular.ttf: \
-		BigletterAsteriskMultics-Regular.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
 # Target: BigletterMultics-Bold.sfd
 
 BigletterMultics-Bold.sfd: \
@@ -135,27 +114,6 @@ BigletterAsteriskMultics-Bold.sfd: \
 		big.json ./makefont.py
 	./makefont.py --name BigletterAsteriskMultics --bold \
 		--shape Asterisk --xy-scale 1.47 --radius 38 --json "big.json"
-
-##############################################################################
-# Target: BigletterMultics-Bold.ttf
-
-BigletterMultics-Bold.ttf: \
-		BigletterMultics-Bold.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: BigletterStarMultics-Bold.ttf
-
-BigletterStarMultics-Bold.ttf: \
-		BigletterStarMultics-Bold.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: BigletterAsteriskMultics-Bold.ttf
-
-BigletterAsteriskMultics-Bold.ttf: \
-		BigletterAsteriskMultics-Bold.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: LittleletterMultics-Regular.sfd
@@ -182,27 +140,6 @@ LittleletterAsteriskMultics-Regular.sfd: \
 		--shape Asterisk --xy-scale 1.20 --radius 60 --json "little.json"
 
 ##############################################################################
-# Target: LittleletterMultics-Regular.ttf
-
-LittleletterMultics-Regular.ttf: \
-		LittleletterMultics-Regular.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: LittleletterStarMultics-Regular.ttf
-
-LittleletterStarMultics-Regular.ttf: \
-		LittleletterStarMultics-Regular.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: LittleletterAsteriskMultics-Regular.ttf
-
-LittleletterAsteriskMultics-Regular.ttf: \
-		LittleletterAsteriskMultics-Regular.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
 # Target: LittleletterMultics-Bold.sfd
 
 LittleletterMultics-Bold.sfd: \
@@ -227,25 +164,10 @@ LittleletterAsteriskMultics-Bold.sfd: \
 		--shape Asterisk --xy-scale 1.20 --radius 58 --json "little.json"
 
 ##############################################################################
-# Target: LittleletterMultics-Bold.ttf
+# Target: .sfd -> .ttf
 
-LittleletterMultics-Bold.ttf: \
-		LittleletterMultics-Bold.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: LittleletterStarMultics-Bold.ttf
-
-LittleletterStarMultics-Bold.ttf: \
-		LittleletterStarMultics-Bold.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
-
-##############################################################################
-# Target: LittleletterAsteriskMultics-Bold.ttf
-
-LittleletterAsteriskMultics-Bold.ttf: \
-		LittleletterAsteriskMultics-Bold.sfd
-	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
+%.ttf: %.sfd
+	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$(basename $@)" "$@"
 
 ##############################################################################
 # Target: distdir
