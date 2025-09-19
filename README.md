@@ -8,9 +8,9 @@
 <!-- scspell-id: 9c26b4ce-9415-11f0-9013-80ee73e9b8e7 -->
 # Bigletter (and Littleletter) Multics Fonts
 
-<table border="0"><tr><td><img style="display:block;" src=".preview/BigLetter.png" width="100%" height="100%"/></td><td><img style="display:block;" src=".preview/LittleLetter.png" width="100%" height="100%"/></td></tr></table>
+<table border="0"><tr><td><img style="display:block;" src=".preview/BigLetter.png" width="100%" height="100%"/></td><td><img style="display:block;" src=".preview/BigLetter-sample.png" width="100%" height="100%"/></td></tr></table>
 
-<table border="0"><tr><td><img style="display:block;" src=".preview/BigLetter-sample.png" width="100%" height="100%"/></td><td><img style="display:block;" src=".preview/LittleLetter-sample.png" width="100%" height="100%"/></td></tr></table>
+<table border="0"><tr><td><img style="display:block;" src=".preview/LittleLetter.png" width="100%" height="100%"/></td><td><img style="display:block;" src=".preview/LittleLetter-sample.png" width="100%" height="100%"/></td></tr></table>
 
 ## Overview
 
@@ -43,6 +43,10 @@
 * We build *three* different TrueType variants of each font:
   * the "Normal" font optimized for the screen and smaller sizes, and,
   * "Star" and "Asterisk" variants optimized for larger print (like banner pages).
+
+### Preview
+
+* A [**PDF preview**](.preview/Bigletter_Littleletter.pdf) is available.
 
 ## Build
 
