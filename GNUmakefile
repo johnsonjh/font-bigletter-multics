@@ -16,7 +16,8 @@
 SHELL=/bin/sh
 RM=rm -f
 FONTFORGE?=fontforge
-FONTFORGE_ARGS?=-lang=ff -c 'Open($$1); SetFontNames($$2, $$2, $$2); Generate($$2)'
+FONTFORGE_ARGS?=-lang=ff -c \
+  'Open($$1); SetFontNames($$2, $$2, $$2); Generate($$2)'
 CC?=cc
 CFLAGS?=-O
 LDFLAGS?=-s
@@ -31,138 +32,227 @@ MAKE?="$$(command -v gnumake 2> /dev/null || \
 # Target: all
 
 .PHONY: all
-all: BigletterMultics-Regular.ttf        BigletterMultics-Bold.ttf     \
-     LittleletterMultics-Regular.ttf     LittleletterMultics-Bold.ttf  \
-     BigletterStarMultics-Regular.ttf    BigletterStarMultics-Bold.ttf \
-     LittleletterStarMultics-Regular.ttf LittleletterStarMultics-Bold.ttf
+all: \
+		BigletterMultics-Regular.ttf            \
+		BigletterMultics-Bold.ttf               \
+		LittleletterMultics-Regular.ttf         \
+		LittleletterMultics-Bold.ttf            \
+		BigletterStarMultics-Regular.ttf        \
+		BigletterStarMultics-Bold.ttf           \
+		LittleletterStarMultics-Regular.ttf     \
+		LittleletterStarMultics-Bold.ttf        \
+		BigletterAsteriskMultics-Regular.ttf    \
+		BigletterAsteriskMultics-Bold.ttf       \
+		LittleletterAsteriskMultics-Regular.ttf \
+		LittleletterAsteriskMultics-Bold.ttf
 
 ##############################################################################
 # Target: makefont
 
-makefont: makefont.c
+makefont: \
+		makefont.c
 	$(CC) $(CFLAGS) $(LDFLAGS) -o "$@" "$<"
 
 ##############################################################################
 # Target: big.json
 
-big.json: makefont
+big.json: \
+		makefont
 	./makefont "big" > "$@"
 
 ##############################################################################
 # Target: little.json
 
-little.json: makefont
+little.json: \
+		makefont
 	./makefont "little" > "$@"
 
 ##############################################################################
 # Target: BigletterMultics-Regular.sfd
 
-BigletterMultics-Regular.sfd: big.json ./makefont.py
-	./makefont.py --name BigletterMultics --shape Diamond \
-		--xy-scale 1.32 --radius 40 --json "big.json"
+BigletterMultics-Regular.sfd: \
+		big.json ./makefont.py
+	./makefont.py --name BigletterMultics \
+		--shape Diamond --xy-scale 1.32 --radius 40 --json "big.json"
 
 ##############################################################################
 # Target: BigletterStarMultics-Regular.sfd
 
-BigletterStarMultics-Regular.sfd: big.json ./makefont.py
-	./makefont.py --name BigletterStarMultics --shape Star \
-		--xy-scale 1.32 --radius 40 --json "big.json"
+BigletterStarMultics-Regular.sfd: \
+		big.json ./makefont.py
+	./makefont.py --name BigletterStarMultics \
+		--shape Star --xy-scale 1.32 --radius 40 --json "big.json"
+
+##############################################################################
+# Target: BigletterAsteriskMultics-Regular.sfd
+
+BigletterAsteriskMultics-Regular.sfd: \
+		big.json ./makefont.py
+	./makefont.py --name BigletterAsteriskMultics \
+		--shape Asterisk --xy-scale 1.47 --radius 40 --json "big.json"
 
 ##############################################################################
 # Target: BigletterMultics-Regular.ttf
 
-BigletterMultics-Regular.ttf: BigletterMultics-Regular.sfd
+BigletterMultics-Regular.ttf: \
+		BigletterMultics-Regular.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: BigletterStarMultics-Regular.ttf
 
-BigletterStarMultics-Regular.ttf: BigletterStarMultics-Regular.sfd
+BigletterStarMultics-Regular.ttf: \
+		BigletterStarMultics-Regular.sfd
+	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
+
+##############################################################################
+# Target: BigletterAsteriskMultics-Regular.ttf
+
+BigletterAsteriskMultics-Regular.ttf: \
+		BigletterAsteriskMultics-Regular.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: BigletterMultics-Bold.sfd
 
-BigletterMultics-Bold.sfd: big.json ./makefont.py
-	./makefont.py --name BigletterMultics --bold --shape Diamond \
-		--xy-scale 1.32 --radius 38 --json "big.json"
+BigletterMultics-Bold.sfd: \
+		big.json ./makefont.py
+	./makefont.py --name BigletterMultics --bold \
+		--shape Diamond --xy-scale 1.32 --radius 38 --json "big.json"
 
 ##############################################################################
 # Target: BigletterStarMultics-Bold.sfd
 
-BigletterStarMultics-Bold.sfd: big.json ./makefont.py
-	./makefont.py --name BigletterStarMultics --bold --shape Star \
-		--xy-scale 1.32 --radius 38 --json "big.json"
+BigletterStarMultics-Bold.sfd: \
+		big.json ./makefont.py
+	./makefont.py --name BigletterStarMultics --bold \
+		--shape Star --xy-scale 1.32 --radius 38 --json "big.json"
+
+##############################################################################
+# Target: BigletterAsteriskMultics-Bold.sfd
+
+BigletterAsteriskMultics-Bold.sfd: \
+		big.json ./makefont.py
+	./makefont.py --name BigletterAsteriskMultics --bold \
+		--shape Asterisk --xy-scale 1.47 --radius 38 --json "big.json"
 
 ##############################################################################
 # Target: BigletterMultics-Bold.ttf
 
-BigletterMultics-Bold.ttf: BigletterMultics-Bold.sfd
+BigletterMultics-Bold.ttf: \
+		BigletterMultics-Bold.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: BigletterStarMultics-Bold.ttf
 
-BigletterStarMultics-Bold.ttf: BigletterStarMultics-Bold.sfd
+BigletterStarMultics-Bold.ttf: \
+		BigletterStarMultics-Bold.sfd
+	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
+
+##############################################################################
+# Target: BigletterAsteriskMultics-Bold.ttf
+
+BigletterAsteriskMultics-Bold.ttf: \
+		BigletterAsteriskMultics-Bold.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: LittleletterMultics-Regular.sfd
 
-LittleletterMultics-Regular.sfd: little.json ./makefont.py
-	./makefont.py --name LittleletterMultics --shape Diamond \
-		--xy-scale 1.08 --radius 60 --json "little.json"
+LittleletterMultics-Regular.sfd: \
+		little.json ./makefont.py
+	./makefont.py --name LittleletterMultics \
+		--shape Diamond --xy-scale 1.08 --radius 60 --json "little.json"
 
 ##############################################################################
 # Target: LittleletterStarMultics-Regular.sfd
 
-LittleletterStarMultics-Regular.sfd: little.json ./makefont.py
-	./makefont.py --name LittleletterStarMultics --shape Star \
-		--xy-scale 1.08 --radius 60 --json "little.json"
+LittleletterStarMultics-Regular.sfd: \
+		little.json ./makefont.py
+	./makefont.py --name LittleletterStarMultics \
+		--shape Star --xy-scale 1.08 --radius 60 --json "little.json"
+
+##############################################################################
+# Target: LittleletterAsteriskMultics-Regular.sfd
+
+LittleletterAsteriskMultics-Regular.sfd: \
+		little.json ./makefont.py
+	./makefont.py --name LittleletterAsteriskMultics \
+		--shape Asterisk --xy-scale 1.20 --radius 60 --json "little.json"
 
 ##############################################################################
 # Target: LittleletterMultics-Regular.ttf
 
-LittleletterMultics-Regular.ttf: LittleletterMultics-Regular.sfd
+LittleletterMultics-Regular.ttf: \
+		LittleletterMultics-Regular.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: LittleletterStarMultics-Regular.ttf
 
-LittleletterStarMultics-Regular.ttf: LittleletterStarMultics-Regular.sfd
+LittleletterStarMultics-Regular.ttf: \
+		LittleletterStarMultics-Regular.sfd
+	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
+
+##############################################################################
+# Target: LittleletterAsteriskMultics-Regular.ttf
+
+LittleletterAsteriskMultics-Regular.ttf: \
+		LittleletterAsteriskMultics-Regular.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: LittleletterMultics-Bold.sfd
 
-LittleletterMultics-Bold.sfd: little.json ./makefont.py
-	./makefont.py --name LittleletterMultics --bold -s Diamond \
-		--xy-scale 1.08 --radius 58 --json "little.json"
+LittleletterMultics-Bold.sfd: \
+		little.json ./makefont.py
+	./makefont.py --name LittleletterMultics --bold \
+		--shape Diamond --xy-scale 1.08 --radius 58 --json "little.json"
 
 ##############################################################################
 # Target: LittleletterStarMultics-Bold.sfd
 
-LittleletterStarMultics-Bold.sfd: little.json ./makefont.py
-	./makefont.py --name LittleletterStarMultics --bold --shape Star \
-		--xy-scale 1.08 --radius 58 --json "little.json"
+LittleletterStarMultics-Bold.sfd: \
+		little.json ./makefont.py
+	./makefont.py --name LittleletterStarMultics --bold \
+		--shape Star --xy-scale 1.08 --radius 58 --json "little.json"
+
+##############################################################################
+# Target: LittleletterAsteriskMultics-Bold.sfd
+
+LittleletterAsteriskMultics-Bold.sfd: \
+		little.json ./makefont.py
+	./makefont.py --name LittleletterAsteriskMultics --bold \
+		--shape Asterisk --xy-scale 1.20 --radius 58 --json "little.json"
 
 ##############################################################################
 # Target: LittleletterMultics-Bold.ttf
 
-LittleletterMultics-Bold.ttf: LittleletterMultics-Bold.sfd
+LittleletterMultics-Bold.ttf: \
+		LittleletterMultics-Bold.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: LittleletterStarMultics-Bold.ttf
 
-LittleletterStarMultics-Bold.ttf: LittleletterStarMultics-Bold.sfd
+LittleletterStarMultics-Bold.ttf: \
+		LittleletterStarMultics-Bold.sfd
+	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
+
+##############################################################################
+# Target: LittleletterAsteriskMultics-Bold.ttf
+
+LittleletterAsteriskMultics-Bold.ttf: \
+		LittleletterAsteriskMultics-Bold.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$@"
 
 ##############################################################################
 # Target: distdir
 
 .PHONY: distdir
-distdir: all ./TrueType
+distdir: \
+		all ./TrueType
 	$(CP) ./*.ttf ./TrueType/
 	$(MAKE) clean
 

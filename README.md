@@ -10,6 +10,8 @@
 
 <table border="0"><tr><td><img style="display:block;" src=".images/BigLetter.png" width="100%" height="100%"/></td><td><img style="display:block;" src=".images/LittleLetter.png" width="100%" height="100%"/></td></tr></table>
 
+<table border="0"><tr><td><img style="display:block;" src=".images/BigLetter-sample.png" width="100%" height="100%"/></td><td><img style="display:block;" src=".images/LittleLetter-sample.png" width="100%" height="100%"/></td></tr></table>
+
 ## Overview
 
 * The [Multics](https://swenson.org/multics_wiki/) I/O daemon (*see:* [Multics printing software](https://multicians.org/printer.html)) includes the [`bigletter_`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/bigletter_.pl1.html) procedure.
@@ -38,9 +40,9 @@
 
 ### Variants
 
-* We build *two* different TrueType variants of each font:
-  * the "normal" font optimized for the screen and smaller sizes, and,
-  * a "star" variant optimized for larger print (like banner pages).
+* We build *three* different TrueType variants of each font:
+  * the "Normal" font optimized for the screen and smaller sizes, and,
+  * "Star" and "Asterisk" variants optimized for larger print (like banner pages).
 
 ## Build
 
@@ -53,7 +55,6 @@
 ## Future
 
 * Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/))
-* Rendering the "star" variants using asterisks
 
 ## Availability
 

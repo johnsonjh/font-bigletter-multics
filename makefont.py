@@ -58,8 +58,8 @@ parser.add_argument(
     "--shape",
     type=str,
     default="Round",
-    choices=["Round", "Diamond", "Star"],
-    help="Dot shape (Round, Diamond, or Star)",
+    choices=["Round", "Diamond", "Star", "Asterisk"],
+    help="Dot shape (Round, Diamond, Star, or Asterisk)",
 )
 
 args = parser.parse_args()
@@ -202,6 +202,38 @@ for uch in chars:
             p.transform(mat_restore)
         cx = p.x
         cy = p.y
+
+        if shape == "Asterisk":
+            # Draw a 6-pointed star as three intersecting strokes
+            stroke_width = r / 2.5
+            for i in range(3):
+                angle = i * math.pi / 3.0  # 0, 60, 120 degrees
+                c_stroke = fontforge.contour()
+
+                # Define corners of a horizontal rectangle
+                points = [
+                    (-r, -stroke_width / 2.0),
+                    (r, -stroke_width / 2.0),
+                    (r, stroke_width / 2.0),
+                    (-r, stroke_width / 2.0),
+                ]
+
+                # Rotate and translate points
+                rotated_points = []
+                for x, y in points:
+                    x_rot = x * math.cos(angle) - y * math.sin(angle)
+                    y_rot = x * math.sin(angle) + y * math.cos(angle)
+                    rotated_points.append((cx + x_rot, cy + y_rot))
+
+                # Create contour from points
+                c_stroke.moveTo(rotated_points[0][0], rotated_points[0][1])
+                c_stroke.lineTo(rotated_points[1][0], rotated_points[1][1])
+                c_stroke.lineTo(rotated_points[2][0], rotated_points[2][1])
+                c_stroke.lineTo(rotated_points[3][0], rotated_points[3][1])
+                c_stroke.closed = True
+                lyr += c_stroke
+            continue
+
         c = fontforge.contour()
         # draw a printer dot at (cx, cy) using chosen shape
         if shape == "Square":
