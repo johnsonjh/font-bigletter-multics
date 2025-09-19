@@ -260,32 +260,44 @@ for uch in chars:
     # add PS hints, because we can
     glyph.autoHint()
 
-# poor old space, always left to the end ...
-space = font.createChar(ord(" "))
-space.left_side_bearing = 90
-space.right_side_bearing = 90
-space.width = 600
-
 # Find the maximum glyph width
 max_width = 0
 for g in font.glyphs():
+    if g.glyphname == "space":
+        continue
     bbox = g.boundingBox()
     width = bbox[2] - bbox[0]
     if width > max_width:
         max_width = width
 
+# Set font width based on matrix_width
+if matrix_width == 8:  # bigletter
+    advance_width = round(max_width * 10 / 8)
+elif matrix_width == 5:  # littleletter
+    advance_width = round(max_width * 6 / 5)
+else:
+    advance_width = round(max_width)
+
 # one last blat through all the glyphs to set monospace parameters
 for g in font.glyphs():
-    g.width = 600
+    if g.glyphname == "space":
+        continue
     bbox = g.boundingBox()
-    # Center the glyph in the advance width
     width = bbox[2] - bbox[0]
-    space = max_width - width
-    g.left_side_bearing = int(space / 2)
-    g.right_side_bearing = int(space - (space / 2))
+    g.width = advance_width
+    # Center the glyph in the advance width
+    space_around = advance_width - width
+    lsb = space_around / 2
+    rsb = space_around - lsb
+    g.left_side_bearing = round(lsb)
+    g.right_side_bearing = round(rsb)
     print(
         f"Glyph: {g.glyphname}, BBox: {bbox}, Width: {width}, LSB: {g.left_side_bearing}, RSB: {g.right_side_bearing}"
     )
+
+# poor old space, always left to the end ...
+space = font.createChar(ord(" "))
+space.width = advance_width
 
 # these need to restated for some reason,
 #  and even then they don't always stick in FontForge
