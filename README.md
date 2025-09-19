@@ -46,7 +46,7 @@
 
 ### Preview
 
-* A [**PDF preview**](.preview/Bigletter_Littleletter.pdf) is available.
+* A [**PDF preview document**](.preview/Bigletter_Littleletter.pdf) is available.
 
 ## Build
 
