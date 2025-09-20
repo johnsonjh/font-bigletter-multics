@@ -31,12 +31,13 @@
 ## Fonts
 
 * This repository contains:
-  * a [C program](makefont.c) which converts these tables to JSON files,
+  * a [C program `makefont`](makefont.c) which converts these tables to JSON files,
+  * a [C program `makefiglet`](makefiglet.c) which converts the JSON files to [**FIGlet fonts**](http://www.figlet.org/),
   * and [Python program](makefont.py) which converts the JSON files to [Spline Font Databases](https://github.com/fontforge/fontforge/blob/master/fontforge/sfd.c).
 []()
 
 []()
-* [Fontforge](https://fontforge.org/) is used to convert the SFD files to monospaced dot-matrix style TrueType fonts.
+* [Fontforge](https://fontforge.org/) is used to convert the SFD files to monospaced dot-matrix style **TrueType fonts**.
 
 ### Variants
 
@@ -51,14 +52,11 @@
 ## Build
 
 * Building the fonts from source requires [GNU Make](https://www.gnu.org/software/make/), a [C compiler](https://gcc.gnu.org/), [Python 3](https://www.python.org/), and [Fontforge](https://fontforge.org/) with [Python support](https://fontforge.org/docs/scripting/python.html).
+* For debugging and development, the C programs are compatible with the [SoftIntegration Ch](https://www.softintegration.com/) C/C++ interpreter.
 
 ## Download
 
 * You may [download pre-built TrueType fonts here](TrueType) if you are unable to build from source.
-
-## Future
-
-* Fully vectorized fonts (created with the help of [AutoTrace](https://github.com/autotrace/autotrace) or [Potrace](https://potrace.sourceforge.net/))
 
 ## Availability
 

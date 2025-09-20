@@ -44,7 +44,9 @@ all: \
 		BigletterAsteriskMultics-Regular.ttf    \
 		BigletterAsteriskMultics-Bold.ttf       \
 		LittleletterAsteriskMultics-Regular.ttf \
-		LittleletterAsteriskMultics-Bold.ttf
+		LittleletterAsteriskMultics-Bold.ttf    \
+		bigletter.flf                           \
+		littleletter.flf
 
 ##############################################################################
 # Target: makefont
@@ -66,6 +68,41 @@ big.json: \
 little.json: \
 		makefont
 	./makefont "little" > "$@"
+
+##############################################################################
+# Target: json
+
+.PHONY: json
+json: \
+		big.json little.json
+
+##############################################################################
+# Target: makefiglet
+
+makefiglet: \
+		makefiglet.c
+	$(CC) $(CFLAGS) $(LDFLAGS) -o "$@" "$<"
+
+##############################################################################
+# Target: bigletter.flf
+
+bigletter.flf: \
+		makefiglet big.json
+	./makefiglet big.json bigletter.flf BigletterMultics
+
+##############################################################################
+# Target: littleletter.flf
+
+littleletter.flf: \
+		makefiglet little.json
+	./makefiglet little.json littleletter.flf LittleletterMultics
+
+##############################################################################
+# Target: figlet
+
+.PHONY: figlet
+figlet: \
+		bigletter.flf littleletter.flf
 
 ##############################################################################
 # Target: BigletterMultics-Regular.sfd
@@ -166,7 +203,8 @@ LittleletterAsteriskMultics-Bold.sfd: \
 ##############################################################################
 # Target: .sfd -> .ttf
 
-%.ttf: %.sfd
+%.ttf: \
+		%.sfd
 	$(FONTFORGE) $(FONTFORGE_ARGS) "$<" "$(basename $@)" "$@"
 
 ##############################################################################
@@ -183,7 +221,7 @@ distdir: \
 
 .PHONY: clean
 clean:
-	$(RM) ./makefont ./*.json ./*.sfd ./*.ttf
+	$(RM) ./makefont ./makefiglet ./*.json ./*.sfd ./*.ttf ./*.flf
 
 ##############################################################################
 # vim: set ft=make noexpandtab tabstop=4 cc=78 :

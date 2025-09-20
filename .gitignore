@@ -8,12 +8,14 @@
 /BigletterMultics-Regular.ttf
 /BigletterStarMultics-Bold.ttf
 /BigletterStarMultics-Regular.ttf
+*.flf
 *.json
 /LittleletterMultics-Bold.ttf
 /LittleletterMultics-Regular.ttf
 /LittleletterStarMultics-Bold.ttf
 /LittleletterStarMultics-Regular.ttf
 log.pvs
+makefiglet
 makefont
 pvsreport/
 *.sfd
