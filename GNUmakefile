@@ -19,8 +19,6 @@ FONTFORGE?=fontforge
 FONTFORGE_ARGS?=-lang=ff -c \
   'Open($$1); SetFontNames($$2, $$2, $$2); Generate($$3)'
 CC?=cc
-CFLAGS?=-O
-LDFLAGS?=-s
 CP?=cp -f
 MAKE?="$$(command -v gnumake 2> /dev/null || \
           command -v gmake   2> /dev/null || \
