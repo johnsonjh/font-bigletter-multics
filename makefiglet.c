@@ -170,7 +170,7 @@ parse_json (FILE * file, struct glyph * glyphs, int * glyph_count)
         break;
     }
 
-  if (ferror(file))
+  if (ferror (file))
     {
       const char * read_error = "FATAL: Read error parsing file";
 
