@@ -35,8 +35,8 @@
 ## Fonts
 
 * This repository contains:
-  * a [C program `makefont`](makefont.c) which converts these tables to JSON files,
-  * a [C program `makefiglet`](makefiglet.c) which converts the JSON files to [**FIGlet fonts**](http://www.figlet.org/),
+  * a [C program (`makefont`)](makefont.c) which converts these tables to JSON files,
+  * a [C program (`makefiglet`)](makefiglet.c) which converts the JSON files to [**FIGlet fonts**](http://www.figlet.org/),
   * and [Python program](makefont.py) which converts the JSON files to [Spline Font Databases](https://github.com/fontforge/fontforge/blob/master/fontforge/sfd.c).
 []()
 
