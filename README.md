@@ -14,7 +14,7 @@
 
 ## Overview
 
-* This repository contains software to builds **TrueType** and **FIGlet** versions of the [Multics](https://swenson.org/multics_wiki/) [`bigletter_`](https://multicians.org/bigletter_.html) fonts.
+* This repository contains software that builds **TrueType** and **FIGlet** versions of the [Multics](https://swenson.org/multics_wiki/) [`bigletter_`](https://multicians.org/bigletter_.html) fonts.
 []()
 
 []()
