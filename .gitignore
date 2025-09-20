@@ -4,12 +4,13 @@
 
 *~
 *.bak
+/bigletter.flf
 /BigletterMultics-Bold.ttf
 /BigletterMultics-Regular.ttf
 /BigletterStarMultics-Bold.ttf
 /BigletterStarMultics-Regular.ttf
-*.flf
 *.json
+/littleletter.flf
 /LittleletterMultics-Bold.ttf
 /LittleletterMultics-Regular.ttf
 /LittleletterStarMultics-Bold.ttf

@@ -210,8 +210,11 @@ LittleletterAsteriskMultics-Bold.sfd: \
 
 .PHONY: distdir
 distdir: \
-		all ./TrueType
+		./TrueType ./FIGlet
+	$(MAKE) clean
+	$(MAKE) all
 	$(CP) ./*.ttf ./TrueType/
+	$(CP) ./*.flf ./FIGlet
 	$(MAKE) clean
 
 ##############################################################################

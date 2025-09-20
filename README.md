@@ -61,7 +61,7 @@
 
 ## Download
 
-* You may [download pre-built TrueType fonts here](TrueType) if you are unable to build from source.
+* You may download [pre-built TrueType fonts](TrueType) and [pre-built FIGlet fonts](FIGlet) if you are unable to build from source.
 
 ## Availability
 
