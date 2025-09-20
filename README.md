@@ -14,6 +14,10 @@
 
 ## Overview
 
+* This repository contains software to builds **TrueType** and **FIGlet** versions of the [Multics](https://swenson.org/multics_wiki/) [`bigletter_`](https://multicians.org/bigletter_.html) fonts.
+[]()
+
+[]()
 * The [Multics](https://swenson.org/multics_wiki/) I/O daemon (*see:* [Multics printing software](https://multicians.org/printer.html)) includes the [`bigletter_`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/bigletter_.pl1.html) procedure.
 * This procedure creates the large text used on Multics print job head and tail (banner) pages.
 * The fonts used on these pages are defined in [`letseg_.alm`](https://dps8m.gitlab.io/sb/MR12.8/library_dir_dir/system_library_standard/source/bound_printing_cmds_.s.archive/letseg_.alm.html) in the Multics source code.
