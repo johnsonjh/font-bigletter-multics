@@ -6,7 +6,10 @@ gs \
   -dNOPAUSE \
   -dBATCH \
   -sDEVICE=png16m \
-  -r600 \
+  -r2400 \
+  -dTextAlphaBits=4 \
+  -dGraphicsAlphaBits=4 \
+  -dDownScaleFactor=4 \
   -dUseCropBox \
   -sOutputFile="page-%03d.png" \
   Bigletter_Littleletter.pdf
