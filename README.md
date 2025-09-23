@@ -55,7 +55,7 @@
 
 ## Build
 
-* Building the fonts from source requires [GNU Make](https://www.gnu.org/software/make/), a [C compiler](https://gcc.gnu.org/), [Python 3](https://www.python.org/), and [Fontforge](https://fontforge.org/) with [Python support](https://fontforge.org/docs/scripting/python.html).
+* Building the fonts from source requires [GNU Make](https://www.gnu.org/software/make/), a [C99 compiler](https://gcc.gnu.org/), [Python 3](https://www.python.org/), and [Fontforge](https://fontforge.org/) with [Python support](https://fontforge.org/docs/scripting/python.html).
 * The build has been tested on IBM AIX, Apple macOS, and GNU/Linux.  Other systems are expected to work with minimal fuss.
 * For debugging and development, the C programs are compatible with the [SoftIntegration Ch](https://www.softintegration.com/) C/C++ interpreter.
 
