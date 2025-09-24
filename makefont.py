@@ -176,7 +176,7 @@ fontforge.loadNamelist("glyphlist.txt")
 for uch in chars:
     glyph = font.createChar(ord(uch))
     pts = []
-    print("*** ", ord(uch), ": ")
+    print("*** ", ord(uch), ": ", flush=True)
     yline = 0
     # go through glyph bitmap, placing dots where we find #s
     for li in chars[uch]:
@@ -324,7 +324,8 @@ for g in font.glyphs():
     g.left_side_bearing = round(lsb)
     g.right_side_bearing = round(rsb)
     print(
-        f"Glyph: {g.glyphname}, BBox: {bbox}, Width: {width}, LSB: {g.left_side_bearing}, RSB: {g.right_side_bearing}"
+        f"Glyph: {g.glyphname}, BBox: {bbox}, Width: {width}, LSB: {g.left_side_bearing}, RSB: {g.right_side_bearing}",
+        flush=True,
     )
 
 # poor old space, always left to the end ...
