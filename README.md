@@ -51,7 +51,7 @@
 
 ### Preview
 
-* A [**PDF preview document**](.preview/Bigletter_Littleletter.pdf) is available.
+* A [**PDF preview document**](https://gitlab.com/dps8m/font-bigletter-multics/-/raw/master/.preview/Bigletter_Littleletter.pdf?ref_type=heads&inline=true) is available.
 
 ## Build
 
