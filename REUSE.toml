@@ -8,7 +8,7 @@
 
 version = 1
 SPDX-PackageName = "font-bigletter-multics"
-SPDX-PackageSupplier = "Jeffrey H. Johnson <trnsz@pobox.com>"
+SPDX-PackageSupplier = "Jeffrey H. Johnson <johnsonjh.dev@gmail.com>"
 SPDX-PackageDownloadLocation = "https://gitlab.com/dps8m/font-bigletter-multics"
 
 [[annotations]]
